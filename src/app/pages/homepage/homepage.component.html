@@ -1,2 +1,9 @@
-<p>homepage works!</p>
+<div class="container">
+  <app-cpsearch
+    (onClicSearchPokemon)="onClicSearchPokemon($event)"
+  ></app-cpsearch>
+  <div class="ContainerCard">
+    <app-cpcardpokemon [JsonPokemon]="JsonPokemon"></app-cpcardpokemon>
+  </div>
+</div>
 <router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div [class.is-animates]="JsonPokemonSearch">
+    <h2>Busca tu pokemon</h2>
+  </div>
+  <div *ngIf="JsonPokemonSearch">
+    <h2>{{ JsonPokemonSearch.name }}</h2>
+    <div class="ContainerImg">
+      <img src="{{ JsonPokemonSearch.url }}" />
+    </div>
+  </div>
+  <div *ngIf="ShowNotFoundPokemon && !JsonPokemonSearch">
+    <h2>Error no se encontre ningún pokemon</h2>
+  </div>
+</div>
